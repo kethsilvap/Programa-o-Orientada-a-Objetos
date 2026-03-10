@@ -1,0 +1,46 @@
+2 - c) programação orientada a objetos.
+A programação orientada a objetos é a escolha mais adequada porque permite representar de forma natural as entidades do sistema, facilita o reuso de código, melhora a organização e torna o sistema mais fácil de expandir e manter no futuro.
+
+3 - Classes do sistema
+
+Livro
+titulo: string
+genero: string
+autor: Autor
+
+Autor
+
+nome: string
+nacionalidade: string
+obrasPublicadas: List<Livro>
+
+Usuario
+
+nome: string
+idade: int
+historico
+Emprestimos: List<Emprestimo>
+
+Emprestimo
+
+dataRetirada: date
+dataDevolucao: date
+livro: Livro
+usuario: Usuario
+
+Relacionamentos entre as classes
+
+Autor (1) → (N) Livro
+Um autor pode ter vários livros.
+
+Usuario (1) → (N) Emprestimo
+Um usuário pode ter vários empréstimos.
+
+Livro (1) → (N) Emprestimo
+Um livro pode aparecer em vários empréstimos ao longo do tempo.
+
+Emprestimo (1) → (1) Usuario
+Cada empréstimo pertence a um único usuário.
+
+Emprestimo (1) → (1) Livro
+Cada empréstimo está associado a um único livro.
